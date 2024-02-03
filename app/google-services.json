@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662219158881",
+    "project_id": "esps-34c01",
+    "storage_bucket": "esps-34c01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662219158881:android:deaf4e078088a646300120",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUeJ1yPeCxAMiOWMMVBXz5NK1O2YbSbO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
