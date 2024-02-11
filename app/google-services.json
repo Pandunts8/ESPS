@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "662219158881",
-    "project_id": "esps-34c01",
-    "storage_bucket": "esps-34c01.appspot.com"
+    "project_number": "616080102191",
+    "project_id": "esps-original",
+    "storage_bucket": "esps-original.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:662219158881:android:deaf4e078088a646300120",
+        "mobilesdk_app_id": "1:616080102191:android:2e460ea7e135287f27c7da",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBUeJ1yPeCxAMiOWMMVBXz5NK1O2YbSbO4"
+          "current_key": "AIzaSyDO26JvJ2qO9HLImTsvbuB9GqRKzhY53RM"
         }
       ],
       "services": {

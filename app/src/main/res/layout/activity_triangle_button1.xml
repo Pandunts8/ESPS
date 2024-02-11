@@ -55,13 +55,25 @@
 
         <Button
             android:id="@+id/chat_button1"
-            android:layout_width="wrap_content"
+            android:layout_width="176dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="75dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginBottom="19dp"
+            android:layout_marginEnd="221dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/chat_button"
+            android:text="Investing" />
+
+        <Button
+            android:id="@+id/invest_button"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/chat_button"
             android:text="@string/chat_button" />
 
