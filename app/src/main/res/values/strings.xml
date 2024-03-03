@@ -4,4 +4,14 @@
     <string name="work">Work</string>
     <string name="company_1">Company 1</string>
     <string name="chat_button">Chat</string>
+    <string name="logo" />
+    <string name="profile_image" />
+    <string name="upload_image" />
+    <string name="name" />
+    <string name="email" />
+    <string name="password" />
+    <string name="phone_number" />
+    <string name="username" />
+    <string name="register" />
+    <string name="login" />
 </resources>

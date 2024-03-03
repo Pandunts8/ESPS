@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".investing_button">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-25dp"
+        android:layout_marginBottom="694dp"
+        android:text="  Ներդրման գումար"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="403dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="640dp"
+        android:hint="Գումար" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="602dp"
+        android:text="Շահութաբերություն"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="403dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="556dp"
+        android:hint="Տոկոս" />
+
+    <TextView
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="520dp"
+        android:text="Կայանի հզորություն"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="403dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="466dp"
+        android:hint="Կվտ" />
+
+    <TextView
+        android:layout_width="397dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="426dp"
+        android:text="Հետ գնման ժամկետ"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="397dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="364dp"
+        android:hint="ժամանակ" />
+
+    <TextView
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="302dp"
+        android:text="Արտադրողականության միջին տարեկան"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="397dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="242dp"
+        android:hint="Կվտ" />
+
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="186dp"
+        android:text="Կայանի շահագործման տարեկան ծախս"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="397dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="115dp"
+         />
+
+    <TextView
+        android:layout_width="382dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="61dp"
+        android:text="էլեկտրաէնեգիայի սկագին"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="397dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-7dp"
+        android:layout_marginBottom="5dp" />
+</RelativeLayout>

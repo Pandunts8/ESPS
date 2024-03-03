@@ -20,7 +20,7 @@ public class activity_work extends AppCompatActivity {
         button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_b2 = new Intent(activity_work.this, Registration.class);
+                Intent intent_b2 = new Intent(activity_work.this, reg.class);
                 startActivity(intent_b2);
             }
         });
