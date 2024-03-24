@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="352dp"
         android:background="@drawable/c1_image"
-
         />
 
     <RelativeLayout
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="316dp"
-            android:text="Անոուն - "
+            android:text="Անուն - "
             android:textSize="20dp" />
 
         <TextView
@@ -56,7 +55,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="225dp"
-            android:text="Արտադրողական - "
+            android:text="Արտադրողականություն - "
             android:textSize="20dp" />
 
 

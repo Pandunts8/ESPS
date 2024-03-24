@@ -1,8 +1,9 @@
 package com.example.myapplication;
 
-import static com.example.myapplication.R.id.button_comp;
+import static com.example.myapplication.R.id.button_log;
 import static com.example.myapplication.R.id.button_registration;
-
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,12 +25,12 @@ public class activity_work extends AppCompatActivity {
                 startActivity(intent_b2);
             }
         });
-        Button button_1 = findViewById(button_comp);
+        Button button_1 = findViewById(button_log);
 
         button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_b1 = new Intent(activity_work.this, company_list.class);
+                Intent intent_b1 = new Intent(activity_work.this, Log_page.class);
                 startActivity(intent_b1);
             }
             });

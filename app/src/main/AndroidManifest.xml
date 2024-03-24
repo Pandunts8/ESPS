@@ -8,17 +8,41 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+
         <activity
-            android:name=".investing_button"
+            android:name=".Log_page"
+            android:exported="false" />
+        <activity android:name=".SellerActivity" />
+        <activity
+            android:name=".LoginActivity_seller"
+            android:exported="false" />
+        <activity
+            android:name=".Registration_Physical_seller"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity_seller"
+            android:exported="false" />
+        <activity
+            android:name=".seller_parts"
+            android:exported="false" />
+        <activity
+            android:name=".Registration_Physical"
+            android:exported="false" />
+        <activity
+            android:name=".custommer_parts"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".investing_button"
             android:exported="false" />
         <activity
             android:name=".RegistrationActivity"
@@ -36,8 +60,9 @@
             android:name=".triangle_button1"
             android:exported="false" />
         <activity
-            android:name=".company_list"
-            android:exported="false" />
+            android:name=".CompanyListActivity"
+            android:exported="true" />
+
         <activity
             android:name=".activity_sf"
             android:exported="false" />

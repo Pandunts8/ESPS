@@ -4,32 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".reg"
+    tools:context=".custommer_parts"
     android:background="@drawable/background1">
 
-    <Button
-        android:id="@+id/customer"
-        android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="363dp"
-        android:background="@drawable/chat_button"
-        android:text="Customer"
-        android:textColor="@color/white"
-        android:textSize="35dp" />
 
     <Button
-        android:id="@+id/seller"
+        android:id="@+id/person"
+        android:layout_width="405dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="363dp"
+        android:background="@drawable/chat_button"
+        android:text="Physical Person"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/company"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="274dp"
+        android:layout_marginBottom="281dp"
         android:background="@drawable/chat_button"
-        android:text="Seller"
+        android:text="Company"
         android:textColor="@color/white"
-        android:textSize="35dp" />
+        android:textSize="30dp" />
+
 </RelativeLayout>

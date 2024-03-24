@@ -1,7 +1,5 @@
 package com.example.myapplication;
 
-import static com.example.myapplication.R.id.button_registration;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +7,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,7 +23,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class RegistrationActivity extends Activity {
+public class Registration_Physical_seller extends Activity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
 
@@ -35,10 +34,9 @@ public class RegistrationActivity extends Activity {
     private EditText confirmPasswordEditText;
     private Button registerButton, uploadImageButton;
     private ImageView profileImageView;
+    private CheckBox showPasswordCheckBox;
 
     private FirebaseAuth mAuth;
-    private CompoundButton showPasswordCheckBox;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,21 +56,32 @@ public class RegistrationActivity extends Activity {
         registerButton = findViewById(R.id.registerButton);
         uploadImageButton = findViewById(R.id.uploadImageButton);
         profileImageView = findViewById(R.id.profileImageView);
+        showPasswordCheckBox = findViewById(R.id.showPasswordCheckBox);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        // Set up the show password checkbox
+        showPasswordCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent_b2 = new Intent(RegistrationActivity.this, CompanyListActivity.class);
-                startActivity(intent_b2);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // Show passwords
+                    passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    confirmPasswordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                } else {
+                    // Hide passwords
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    confirmPasswordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
+                passwordEditText.setSelection(passwordEditText.getText().length());
+                confirmPasswordEditText.setSelection(confirmPasswordEditText.getText().length());
             }
         });
+
         uploadImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openFileChooser();
             }
         });
-
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +105,6 @@ public class RegistrationActivity extends Activity {
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri imageUri = data.getData();
             profileImageView.setImageURI(imageUri);
-            // Here you should handle the image upload process
         }
     }
 
@@ -106,10 +114,9 @@ public class RegistrationActivity extends Activity {
         String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
         if (!password.equals(confirmPassword)) {
-            Toast.makeText(RegistrationActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Registration_Physical_seller.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             return;
         }
-
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -117,18 +124,19 @@ public class RegistrationActivity extends Activity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            user.sendEmailVerification()
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if (task.isSuccessful()) {
-                                                Toast.makeText(RegistrationActivity.this, "Verification email sent to " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                            if (user != null) {
+                                user.sendEmailVerification()
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+                                                    Toast.makeText(Registration_Physical_seller.this, "Verification email sent to " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                                                }
                                             }
-                                        }
-                                    });
+                                        });
+                            }
                         } else {
-                            Toast.makeText(RegistrationActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Registration_Physical_seller.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }
                 });

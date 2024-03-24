@@ -11,6 +11,5 @@
         android:layout_height="wrap_content"
         android:text="Company Name"
         android:textSize="18sp" />
+    <!-- You can add more views here as needed -->
 </LinearLayout>
-
-

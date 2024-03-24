@@ -8,19 +8,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class triangle_button1 extends AppCompatActivity {
+public class Log_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_triangle_button1);
-
-
-        Button button = findViewById(R.id.invest_button);
+        setContentView(R.layout.activity_log_page);
+        Button button = findViewById(R.id.customer);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(triangle_button1.this, investing_button.class);
+                Intent intent = new Intent(Log_page.this, LoginActivity.class);
+                startActivity(intent);
+            }
+
+        });
+        Button button2 = findViewById(R.id.seller);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Log_page.this, LoginActivity_seller.class);
                 startActivity(intent);
             }
 

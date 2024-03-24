@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical|center_horizontal"
     tools:context=".MainActivity"
+    android:background="@drawable/background1"
     >
 
 
@@ -22,7 +23,7 @@
         android:textSize="20dp" />
 
     <Button
-        android:id="@+id/button_comp"
+        android:id="@+id/button_log"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -31,7 +32,7 @@
         android:layout_marginTop="373dp"
         android:layout_marginBottom="310dp"
         android:background="@drawable/chat_button"
-        android:text="Company List"
+        android:text="Login"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
